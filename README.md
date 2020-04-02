@@ -38,8 +38,8 @@ Things you may want to cover:
 |------|----|-------|
 |text|text||
 |image|text||
-|user_id|integer|null: false, foreign_key: true|
-|group_id||integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to: group
@@ -50,14 +50,14 @@ Things you may want to cover:
 |title|string|null: false|
 ### Association
 - has_many :users_groups
-- has_many :users, throught: :uers_groups
+- has_many :users, throught: :users_groups
 - has_many  :messages
 
 ## users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null:false,foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null:false,foreign_key: true|
 ### Association
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
