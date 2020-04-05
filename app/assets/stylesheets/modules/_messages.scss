@@ -6,7 +6,7 @@
 .side-bar {
   float: left;
   &__user-name {
-    background-color: #253141;
+    background-color: $select1-color;
     height: 100px;
     width: 300px;
     display: flex;
@@ -46,7 +46,7 @@
     }
   }
  .side-bar__group-list {
-   background-color: #2f3e51;
+   background-color: $select2-color;
    height: calc(100vh - 100px);
    width: 300px;
 
@@ -80,7 +80,7 @@
    position: relative;
 
     .main-chat__group-left {
-      color: #333333;
+      color: $select3-color;
       padding-top: 35px;
       padding-bottom: 15px;
       margin-left: 40px;
@@ -88,13 +88,13 @@
      
      }
     .main-chat__group-left__bottom {
-        color: #999999;
+        color: $select4-color;
         font-size: 12px;
         margin-left: 40px;
       }
     
     a {
-       color: #38aef0;
+       color: $select5-color;
        font-size: 16px;
        border: 1px solid;
        text-decoration: none;
@@ -112,7 +112,7 @@
   
   &__message-list {
    height: calc(100vh - 190px);
-   background-color: #fafafa;
+   background-color: $select6-color;
    padding-left: 40px;
    padding-top: 35px;
 
@@ -122,26 +122,26 @@
       margin-bottom: 12px;
 
       .main-chat__message-list__name {
-     color: #333333;
+     color: $select3-color;
      font-size: 16px;
      float: left;
    }
 
       .main-chat__message-list__date {
-     color: #999999;
+     color: $select4-color;
      font-size: 12px;
      float: right;
      margin-left: 5px;
    }
   }
     .main-chat__message-list__content {
-     color: #434A54;
+     color: $select7-color;
      font-size: 14px;
      margin-bottom: 46px;
    }
   }
   &__message-form {
-    background-color: #d2d2d2;
+    background-color: $select8-color;
     height: 90px;
     position: relative;
     display: flex;
@@ -170,7 +170,7 @@
           padding-top: 10px;
           padding-left: 10px;
           padding-right: 800px;
-          color: #999999;
+          color: $select4-color;
       } 
       .input-box__image{
         input{
@@ -179,7 +179,7 @@
      }
     }
       .main-chat__message-form__send-btn {
-        background-color: #38aef0;
+        background-color: $select5-color;
         color: $selection-color;
         padding-bottom: 5px;
         padding-top: 10px;
