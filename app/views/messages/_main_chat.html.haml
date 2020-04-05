@@ -1,7 +1,7 @@
 .main-chat
   .main-chat__group-info
     .main-chat__group-left Test
-    %a{ :href => '＃', :id => 'edit-btn' } Edit
+    %a= link_to 'Edit', class: "edit-btn"
     .main-chat__group-left__bottom Member : mami
 
   .main-chat__message-list
@@ -17,4 +17,3 @@
           = icon('fas', 'image')
           %input{type: "file"}
       .main-chat__message-form__send-btn Send
-
