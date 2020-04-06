@@ -28,20 +28,20 @@
       width:60px;
       display: flex;
       justify-content: flex-end;
+    }
 
      .side-bar__user-name__edit {
        text-decoration: none;
        margin-right: 5px;
-      .edit_btn {
+
+      .edit-btn {
         color: $selection-color;
       }
      }
-      .side-bar__user-name__new {
+      .setting-btn {
         text-decoration: none;
+        color: $selection-color;
 
-         .new_btn {
-           color: $selection-color;
-         }
       }
     }
   }
@@ -65,7 +65,7 @@
      margin-right: 20px;
    }
  }
-}
+
 
 
 
