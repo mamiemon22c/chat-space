@@ -2,7 +2,39 @@
   box-sizing: border-box;
 }
 
+.chat-group-form__label {
+  color: $selection-color;
+}
 
+// message
+
+
+.upper-message {
+  display: flex;
+
+  .upper-message__user-name {
+  color: $select3-color;
+  font-size: 16px;
+  }
+
+  .upper-message__date {
+  color: $select4-color;
+  font-size: 12px;
+  margin-left: 5px;
+  padding-top: 4px;
+  padding-left: 20px;
+  }
+}
+
+.lower-message {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: $select7-color
+}
+
+
+// side-bar
 .side-bar {
   float: left;
   &__user-name {
@@ -36,6 +68,8 @@
 
       .edit-btn {
         color: $selection-color;
+        display: inline-block;
+        padding-right: 5px;
       }
      }
       .setting-btn {
@@ -49,6 +83,29 @@
    background-color: $select2-color;
    height: calc(100vh - 100px);
    width: 300px;
+
+   .aaa {
+     text-decoration: none;
+
+   }
+
+   .group__name {
+    color: $selection-color;
+    font-size: 15px;
+    padding-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+   }
+
+   .group__message {
+    color: $selection-color;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 13px;
+   }
 
    .side-bar__group-top {
      color: $selection-color;
@@ -67,7 +124,7 @@
  }
 
 
-
+// main-chat 
 
 .main-chat {
   float: right;
@@ -78,6 +135,14 @@
    background-color: $selection-color;
    height: 100px;
    position: relative;
+   
+    &-name {
+      color: $select3-color;
+      padding-top: 35px;
+      margin-left: 40px;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
 
     .main-chat__group-left {
       color: $select3-color;
@@ -111,6 +176,7 @@
   }
   
   &__message-list {
+   overflow: scroll;
    height: calc(100vh - 190px);
    background-color: $select6-color;
    padding-left: 40px;
@@ -122,17 +188,17 @@
       margin-bottom: 12px;
 
       .main-chat__message-list__name {
-     color: $select3-color;
-     font-size: 16px;
-     float: left;
-   }
+      color: $select3-color;
+      font-size: 16px;
+      float: left;
+     }
 
       .main-chat__message-list__date {
-     color: $select4-color;
-     font-size: 12px;
-     float: right;
-     margin-left: 5px;
-   }
+      color: $select4-color;
+      font-size: 12px;
+      float: right;
+      margin-left: 5px;
+     }
   }
     .main-chat__message-list__content {
      color: $select7-color;
@@ -140,57 +206,50 @@
      margin-bottom: 46px;
    }
   }
-  &__message-form {
+  .main-chat__message-form {
     background-color: $select8-color;
     height: 90px;
-    position: relative;
+    width: calc(100vw - 300px);
     display: flex;
-    justify-content: center;
     align-items: center;
+    position: fixed;
+    
   
-
-    &__content {
-      height: 50px;
-      padding-right: 10px;
-      position: absolute;
-      left: 40px; 
+    .new_message { 
       display: flex;
-      margin: auto;
-
-      .main-chat-message-form__white {
-        display: flex;
-        justify-content: space-between;
-        background-color: $selection-color;
+      width: 100vw;
+     
+      .form__message {
+        height: 50px;
+        color: $select4-color;
+        padding-left: 10px;
         margin-right: 15px;
+        margin-left: 40px;
         padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-
-        .main-chat__message-form__text {
-          padding-top: 10px;
-          padding-left: 10px;
-          padding-right: 800px;
-          color: $select4-color;
-      } 
-      .input-box__image{
-        input{
-          display: none;
+        position: relative;
+        width: 100%;
       }
-     }
-    }
-      .main-chat__message-form__send-btn {
-        background-color: $select5-color;
+
+      .form__mask__image {
+        position: absolute;
+        right: 150px;
+        bottom: 30px;
+
+        .hidden {
+          display: none;
+        }
+      } 
+
+      .form__submit {
+        width: 100px;
+        height: 50px;
         color: $selection-color;
-        padding-bottom: 5px;
-        padding-top: 10px;
-        padding-right: 15px;
-        padding-left: 15px;
-        position: right;
+        background-color: #38aef0;
         margin-right: 40px;
-        text-align: center;
       }
     }
   }
+  }
 
-}
+
 
